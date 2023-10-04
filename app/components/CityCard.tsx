@@ -16,7 +16,7 @@ export default function CityCard(props: CityCardProps) {
         </strong>
       </p>
       <p>
-        • {weatherIcons[condition].icon} Current temperature:{' '}
+        • {weatherIcons[condition].icon} Temperatura actual:{' '}
         <strong>
           <i>{currentTemp}</i>
         </strong>
@@ -32,17 +32,17 @@ export default function CityCard(props: CityCardProps) {
         </strong>
       </p>
       <p>
-        • 💧 Chance of rain:{' '}
+        • 💧 Probabilidad de lluvia:{' '}
         <strong>
           <i>{rain}</i>
         </strong>
       </p>
       <p>
-        • 🌅 Sunrise at:{' '}
+        • 🌅 Amanace a las:{' '}
         <strong>
           <i>{sunrise}</i>
         </strong>{' '}
-        🌇 Sunset at:{' '}
+        - 🌇 Anochece a las:{' '}
         <strong>
           <i>{sunset}</i>
         </strong>

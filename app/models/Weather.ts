@@ -1,5 +1,6 @@
 export interface IWeatherInfo {
   city: string
+  country: string
   currentTemp: string
   condition: number
   maxTemp: string
@@ -7,4 +8,12 @@ export interface IWeatherInfo {
   rain: string
   sunrise: string
   sunset: string
+}
+
+
+export interface IWeatherIcon {
+  [key: number]: {
+    text: string
+    icon: string
+  }
 }

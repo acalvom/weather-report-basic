@@ -1,18 +1,18 @@
-import { IWeatherInfo } from '../models/WeatherInfo'
-import { weatherIcons } from '../utils/constants'
+import { IWeatherInfo } from '../models/Weather'
+import { countryIcons, weatherIcons } from '../utils/constants'
 
 interface CityCardProps {
   weatherInfo: IWeatherInfo
 }
 
 export default function CityCard(props: CityCardProps) {
-  const { city, currentTemp, condition, maxTemp, minTemp, rain, sunrise, sunset } =
+  const { city, country, currentTemp, condition, maxTemp, minTemp, rain, sunrise, sunset } =
     props.weatherInfo
   return (
     <div>
       <p>
         <strong>
-          <u>{city}</u>
+          <u>{city} {countryIcons[country]}</u>
         </strong>
       </p>
       <p>
@@ -38,7 +38,7 @@ export default function CityCard(props: CityCardProps) {
         </strong>
       </p>
       <p>
-        • 🌅 Amanace a las:{' '}
+        • 🌅 Amanece a las:{' '}
         <strong>
           <i>{sunrise}</i>
         </strong>{' '}

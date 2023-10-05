@@ -1,6 +1,6 @@
 import { Cities } from '../utils/constants'
 import CityCard from './CityCard'
-import { IWeatherInfo } from '../models/WeatherInfo'
+import { IWeatherInfo } from '../models/Weather'
 
 async function getWeather(city: string) {
   const res = await fetch(`${process.env.API_URL}&q=${city}`)
@@ -19,6 +19,7 @@ export default function CityList() {
           const weather = await getWeather(city.name)
           const weatherInfo: IWeatherInfo = {
             city: weather.location.name,
+            country: weather.location.country,
             currentTemp: (Math.round(weather.current.temp_c) + 'ºC'),
             condition: weather.forecast.forecastday[0].day.condition.code,
             maxTemp: (Math.round(weather.forecast.forecastday[0].day.maxtemp_c) + 'ºC'),

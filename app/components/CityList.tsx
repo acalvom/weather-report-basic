@@ -18,6 +18,7 @@ export default function CityList() {
         {Cities.map(async (city) => {
           const weather = await getWeather(city.name)
           const weatherInfo: IWeatherInfo = {
+            code: city.code,
             city: weather.location.name,
             country: weather.location.country,
             currentTemp: (Math.round(weather.current.temp_c) + 'ºC'),

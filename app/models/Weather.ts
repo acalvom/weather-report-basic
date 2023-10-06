@@ -1,4 +1,5 @@
 export interface IWeatherInfo {
+  code: string
   city: string
   country: string
   currentTemp: string

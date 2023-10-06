@@ -1,18 +1,19 @@
 import { IWeatherInfo } from '../models/Weather'
-import { countryIcons, weatherIcons } from '../utils/constants'
+import { cityEmojis, countryIcons, weatherIcons } from '../utils/constants'
+import { randomEmoji } from '../utils/randomEmoji'
 
 interface CityCardProps {
   weatherInfo: IWeatherInfo
 }
 
 export default function CityCard(props: CityCardProps) {
-  const { city, country, currentTemp, condition, maxTemp, minTemp, rain, sunrise, sunset } =
+  const { code, city, country, currentTemp, condition, maxTemp, minTemp, rain, sunrise, sunset } =
     props.weatherInfo
   return (
     <div>
       <p>
         <strong>
-          <u>{city} {countryIcons[country]}</u>
+          <u>{randomEmoji(cityEmojis[code])} {city} {countryIcons[country]}</u>
         </strong>
       </p>
       <p>

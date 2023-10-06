@@ -1,15 +1,20 @@
 import { IWeatherIcon } from '../models/Weather'
 
+// TODO: añadir más ciudades: Argentina
 export const Cities = [
   { code: 'albacete', name: 'Albacete Spain' },
   { code: 'alcala', name: 'Alcala de Henares Spain' },
   { code: 'alicante', name: 'Alicante Spain' },
+  { code: 'algeciras', name: 'Algeciras Spain' },
   { code: 'avila', name: 'Avila Spain' },
   { code: 'barcelona', name: 'Barcelona Spain' },
   { code: 'bilbao', name: 'Bilbao Spain' },
   { code: 'cadiz', name: 'Cadiz Spain' },
+  { code: 'caracas', name: 'Caracas Venezuela' },
   { code: 'coslada', name: 'Coslada Spain' },
   { code: 'cuenca', name: 'Cuenca Spain' },
+  { code: 'huesca', name: 'Huesca Spain' },
+  { code: 'jaen', name: 'Jaen Spain' },
   { code: 'madrid', name: 'Madrid Spain' },
   { code: 'malaga', name: 'Malaga Spain' },
   { code: 'rieti', name: 'Rieti Italy' },
@@ -24,6 +29,8 @@ export const Cities = [
 export const countryIcons: { [key: string]: string } = {
   Spain: '🇪🇸',
   Italy: '🇮🇹',
+  Venezuela: '🇻🇪',
+  Argentina: '🇦🇷',
 }
 
 export const weatherIcons: IWeatherIcon = {
@@ -185,10 +192,17 @@ export const weatherIcons: IWeatherIcon = {
   },
 }
 
-export const cityEmojis = {
+export const cityEmojis: { [key: string]: string[] } = {
   albacete: [':inigo-party:', ' :inigod:', ':inigo_hot:', ':iñigru:', ':bilbao:'],
   alcala: [':andrea-sun-queen:', ':andrea_brasero:', ':andrea_calvo:', ':andrea_tactica:'],
   alicante: [':ale-bounce:', ':ale-head:', ':ale-mrclean:', ':ale-pray:', ':ale_dreamer:'],
+  algeciras: [
+    ':franky-batin:',
+    ':franky-dranky:',
+    ':franky-jungle:',
+    ':franky-sinatra:',
+    ':frankycheers:',
+  ],
   avila: [
     ':jgleal-head:',
     ':lealwind:',
@@ -201,8 +215,11 @@ export const cityEmojis = {
   barcelona: [':gun-gary:', ':thug-gary:'],
   bilbao: [':inigo-party:', ' :inigod:', ':inigo_hot:', ':iñigru:', ':bilbao:'],
   cadiz: [':golden:', ':golden-bowtie:', ':golden_christmas_shepherd:'],
+  caracas: [':eli-gun:', ':eli-head:'],
   coslada: [':andrea-sun-queen:', ':andrea_brasero:', ':andrea_calvo:', ':andrea_tactica:'],
   cuenca: [':irene-head:', ':irene-writer:', ':irene_walking:'],
+  huesca: [':ulises_avatar:', ':ulises_hype:'],
+  jaen: [':franq_epic_shirt:', ':franq-head:', ':thinking-fran:', ':san-fran:'],
   madrid: [
     ':marina-bunny:',
     ':marina-head:',
@@ -227,6 +244,20 @@ export const cityEmojis = {
     ':alarcon:',
     ':excalidani:',
   ],
+  malaga: [':chechu:', ':holy-chechu:', ':marcelo-head:'],
+  rieti: [
+    ':matteo:',
+    ':matteo-artist:',
+    ':matteo-farmer:',
+    ':matteo-fisherman:',
+    ':matteo-hips-dont-lie:',
+    ':matteo-pizzaiolo:',
+    ':matteo_tripalovski:',
+  ],
+  salamanca: [':rober:', ':rober-bunny:', ':rober-malote:', ':rober-head-flow:'],
+  sansebastian: [':pablo-e-head:'],
+  sevilla: [':cris-panda:'],
+  valladolid: [':pablo-e-head:'],
   valencia: [
     ':alex-serra:',
     ':giner-head:',
@@ -234,6 +265,16 @@ export const cityEmojis = {
     ':betis-bounce:',
     ':betis-head:',
     ':betis_dark_knight:',
+    ':librisito:',
+    ':sito-head:',
+    ':solesito:',
   ],
   vitoria: [':inigo-party:', ' :inigod:', ':inigo_hot:', ':iñigru:', ':bilbao:'],
+  zaragoza: [
+    ':dr_yorch_riviera:',
+    ':jota-yorch:',
+    ':sayan-yorch:',
+    ':yorch-bricklayer:',
+    ':yorch_cooker:',
+  ],
 }

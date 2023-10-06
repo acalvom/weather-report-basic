@@ -1,6 +1,5 @@
 import { IWeatherIcon } from '../models/Weather'
 
-// TODO: añadir más ciudades: Argentina
 export const Cities = [
   { code: 'albacete', name: 'Albacete Spain' },
   { code: 'alcala', name: 'Alcala de Henares Spain' },
